@@ -1,0 +1,21 @@
+platform :ios, '9.0'
+use_frameworks!
+
+inhibit_all_warnings!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+workspace 'DictionaryTest'
+def common_pods
+  pod 'Moya', '~> 13.0'
+  pod 'ObjectMapper', '~> 3.5'
+  pod 'SDWebImage', '~> 5.0'
+end
+
+target 'DictionaryTest' do
+  common_pods
+end
+
+target 'DictionaryTestTests' do
+    common_pods
+end
